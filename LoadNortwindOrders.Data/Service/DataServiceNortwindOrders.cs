@@ -31,10 +31,12 @@ namespace LoadNortwindOrders.Data.Service
             {
                 await ClearTables();
 
-                await LoadDimEmployee();
+                //await LoadDimEmployee();
                 //await LoadDimProductCategory();
                 //await LoadDimCustomers();
                 //await LoadDimShippers();
+                //await LoadFactSales();
+                //await LoadFactCustomerServed();
                 
                 
             }
@@ -208,6 +210,41 @@ namespace LoadNortwindOrders.Data.Service
             {
                 throw new Exception($"Error al limpiar las tablas: {ex.Message}", ex);
             }
+        }
+
+        private async Task<OperactionResult> LoadFactSales()
+        {
+            OperactionResult result = new OperactionResult();
+
+            try
+            {
+                var ventas = await _northwindContext.Vwventas.AsNoTracking().ToListAsync();
+            }
+            catch (Exception ex)
+            {
+
+                result.Success = false;
+                result.Message = $"Error cargando el fact de ventas {ex.Message} ";
+            }
+
+            return result;
+        }
+
+        private async Task<OperactionResult> LoadFactCustomerServed()
+        {
+            OperactionResult result = new OperactionResult() { Success = true };
+
+            try
+            {
+                var customerServed = await _northwindContext.ServedCustomer.AsNoTracking().ToListAsync();
+            }
+            catch (Exception ex)
+            {
+
+                result.Success = false;
+                result.Message = $"Error cargando el fact de clientes atendidos {ex.Message} ";
+            }
+            return result;
         }
 
 

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadNortwindOrders.Data", "LoadNortwindOrders.Data\LoadNortwindOrders.Data.csproj", "{4D3B671B-EA49-4682-94B5-83DD6D5DC4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadNortwindOrders.Data", "LoadNortwindOrders.Data\LoadNortwindOrders.Data.csproj", "{4D3B671B-EA49-4682-94B5-83DD6D5DC4FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadNortwindOrders.WorkerService", "LoadNortwindOrders.WorkerService\LoadNortwindOrders.WorkerService.csproj", "{9863B7DE-BEE8-490C-868A-1D8C36D870D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadNortwindOrders.WorkerService", "LoadNortwindOrders.WorkerService\LoadNortwindOrders.WorkerService.csproj", "{9863B7DE-BEE8-490C-868A-1D8C36D870D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadNortwindOrders.Models", "LoadNortwindOrders.Models\LoadNortwindOrders.Models.csproj", "{B8EB2C46-B287-479D-BE93-674C270843D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9863B7DE-BEE8-490C-868A-1D8C36D870D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9863B7DE-BEE8-490C-868A-1D8C36D870D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9863B7DE-BEE8-490C-868A-1D8C36D870D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EB2C46-B287-479D-BE93-674C270843D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EB2C46-B287-479D-BE93-674C270843D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EB2C46-B287-479D-BE93-674C270843D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EB2C46-B287-479D-BE93-674C270843D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

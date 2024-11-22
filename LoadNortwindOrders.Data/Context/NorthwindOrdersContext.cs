@@ -20,9 +20,10 @@ namespace LoadNortwindOrders.Data.Context
         public DbSet<DimProductCategory> DimProductCategory { get; set; }
         public DbSet<DimCustomer> DimCustomer { get; set; }
         public DbSet<DimShipper> DimShipper { get; set; }
+        
         #endregion
 
-        
+
 
     }
 }
