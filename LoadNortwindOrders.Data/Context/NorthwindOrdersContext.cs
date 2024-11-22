@@ -16,10 +16,13 @@ namespace LoadNortwindOrders.Data.Context
         }
 
         #region "Db Sets"
-        public DbSet<DimEmployee> DimEmployees { get; set; }
-        public DbSet<DimProductCategory> DimProductCategories { get; set; }
-        public DbSet<DimCustomer> DimCustomers { get; set; }
-        public DbSet<DimShipper> DimShippers { get; set; }
+        public DbSet<DimEmployee> DimEmployee { get; set; }
+        public DbSet<DimProductCategory> DimProductCategory { get; set; }
+        public DbSet<DimCustomer> DimCustomer { get; set; }
+        public DbSet<DimShipper> DimShipper { get; set; }
         #endregion
+
+        
+
     }
 }

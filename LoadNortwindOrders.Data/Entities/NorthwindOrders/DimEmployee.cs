@@ -11,8 +11,8 @@ namespace LoadNortwindOrders.Data.Entities.NorthwindOrders
     [Table("DimEmployee")]
     public class DimEmployee
     {
-        
-        public int EmployeeId { get; set; }
+        [Key]
+        public int EmployeeID { get; set; }
         public string? LastName { get; set; }
         public string? FirstName { get; set; }
         public string? Title { get; set; }

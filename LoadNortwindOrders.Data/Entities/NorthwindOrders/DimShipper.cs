@@ -9,7 +9,7 @@ namespace LoadNortwindOrders.Data.Entities.NorthwindOrders
 {
     public class DimShipper
     {
-        
+        [Key]
         public int IdShipper{ get; set; }
         public string? CompanyName { get; set; }
         public string? Phone { get; set; }

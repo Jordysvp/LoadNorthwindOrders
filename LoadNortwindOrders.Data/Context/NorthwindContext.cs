@@ -17,5 +17,12 @@ namespace LoadNortwindOrders.Data.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Shipper> Shippers { get; set; }
         #endregion
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .Property(p => p.UnitPrice)
+                .HasPrecision(18, 4); // Precisión ajustada
+        }
     }
 }

@@ -9,10 +9,7 @@ namespace LoadNortwindOrders.Data.Interfaces
 {
     public interface IDataServiceNortwindOrders
     {
-        Task<OperactionResult> LoadDimCustomer();
-        Task<OperactionResult> LoadDimEmployee();
-        Task<OperactionResult> LoadDimShippers();
-        Task<OperactionResult> LoadDimProductCategory();
-        
+        Task<OperactionResult> LoadDHW();
+
     }
 }

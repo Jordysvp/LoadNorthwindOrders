@@ -9,7 +9,8 @@ namespace LoadNortwindOrders.Data.Entities.NorthwindOrders
 {
     public class DimCustomer
     {
-        
+        [Key]
+       
         public string? IdCustomer { get; set; }
         public string? CustomerName { get; set; }
         public string? City { get; set; }
