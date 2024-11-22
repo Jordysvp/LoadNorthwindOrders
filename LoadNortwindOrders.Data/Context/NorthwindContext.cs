@@ -41,7 +41,7 @@ namespace LoadNortwindOrders.Data.Context
             {
                 entity
                     .HasNoKey()
-                    .ToView("VW_ServedCustomers", "DWH");
+                    .ToView("VW_ServedCustomers", "dbo");
 
 
             });

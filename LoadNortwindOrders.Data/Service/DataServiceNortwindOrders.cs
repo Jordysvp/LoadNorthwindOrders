@@ -31,7 +31,7 @@ namespace LoadNortwindOrders.Data.Service
             {
                 await ClearTables();
 
-                await LoadDimEmployee();
+                //await LoadDimEmployee();
                 //await LoadDimProductCategory();
                 //await LoadDimCustomers();
                 //await LoadDimShippers();
