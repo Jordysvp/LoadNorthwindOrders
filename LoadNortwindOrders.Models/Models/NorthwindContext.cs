@@ -15,6 +15,8 @@ public partial class NorthwindContext : DbContext
 
     public virtual DbSet<ServedCustomer> ServedCustomers { get; set; }
 
+    public virtual DbSet<ViewOrderDate> ViewOrderDates { get; set; }
+
     public virtual DbSet<Vwventa> Vwventas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +31,15 @@ public partial class NorthwindContext : DbContext
             entity.Property(e => e.EmployeeName)
                 .IsRequired()
                 .HasMaxLength(31);
+        });
+
+        modelBuilder.Entity<ViewOrderDate>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("ViewOrderDates");
+
+            entity.Property(e => e.FullDate).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Vwventa>(entity =>

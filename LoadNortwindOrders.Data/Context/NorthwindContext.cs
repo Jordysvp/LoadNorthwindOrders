@@ -17,7 +17,8 @@ namespace LoadNortwindOrders.Data.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Shipper> Shippers { get; set; }
         public DbSet<Vwventa> Vwventas { get; set; }
-        public DbSet<ServedCustomer> ServedCustomer {  get; set; }
+        public DbSet<ServedCustomer> ServedCustomers {  get; set; }
+        public DbSet<ViewOrderDates> ViewOrderDates { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -41,9 +42,17 @@ namespace LoadNortwindOrders.Data.Context
             {
                 entity
                     .HasNoKey()
-                    .ToView("VW_ServedCustomers", "dbo");
+                    .ToView("ServedCustomers", "dbo");
 
 
+            });
+            modelBuilder.Entity<ViewOrderDates>(entity =>
+            {
+                entity
+                    .HasNoKey()
+                    .ToView("ViewOrderDates");
+
+                entity.Property(e => e.FullDate).HasColumnType("datetime");
             });
         }
 

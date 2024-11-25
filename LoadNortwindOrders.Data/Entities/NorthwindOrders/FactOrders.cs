@@ -10,15 +10,15 @@ namespace LoadNortwindOrders.Data.Entities.NorthwindOrders
     public class FactOrders
     {
         [Key]
-        public int Order { get; set; }
-        public int IdCustomer { get; set; }
-        public int IdEmployee { get; set; }
+        public int IdOrder { get; set; }
+        public string IdCustomer { get; set; }
+        public int? IdEmployee { get; set; }
 
-        public int IdFecha { get; set; }
-        public int IdProducto { get; set; }
-        public int IdShipper { get; set; }
-        public int CantidadVendida { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public decimal TotalVenta { get; set; }
+        public int? IdFecha { get; set; }
+        public int? IdProducto { get; set; }
+        public int? IdShipper { get; set; }
+        public int? CantidadVendida { get; set; }
+        public decimal? TotalVenta { get; set; }
+        public string? Country { get; set; }
     }
 }

@@ -19,6 +19,10 @@
          "ObjectType": 3
       },
       {
+         "Name": "[dbo].[ViewOrderDates]",
+         "ObjectType": 3
+      },
+      {
          "Name": "[dbo].[VWVentas]",
          "ObjectType": 3
       }
